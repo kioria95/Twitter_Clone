@@ -1,0 +1,21 @@
+.bottom {
+  display: none;
+}
+
+@media screen and (max-width: 499px) {
+  .bottom {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    border-top: 1px solid var(--twitter-background);
+    background-color: white;
+    bottom: 0px;
+    position: fixed;
+    width: 100vw;
+  }
+
+  .bottom > .MuiSvgIcon-root {
+    font-size: 30px;
+    padding: 10px;
+  }
+}

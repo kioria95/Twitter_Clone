@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./TweetBox.css";
 import { Avatar, Button } from "@material-ui/core";
 import db from "./firebase";
+import firebase from "firebase";
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
@@ -15,6 +16,7 @@ function TweetBox() {
       username: "kioria3",
       verified: true,
       text: tweetMessage,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       image: tweetImage,
       avatar:
         "https://pbs.twimg.com/profile_images/1341032756978053120/C7ysdPy5_400x400.jpg",
@@ -33,7 +35,7 @@ function TweetBox() {
           <input
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}
-            placeholder="What's Happening?"
+            placeholder="What's happening?"
             type="text"
           ></input>
         </div>

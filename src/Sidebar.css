@@ -6,7 +6,7 @@
 }
 
 .sidebar {
-  flex: 0.3 1;
+  flex: 0.2 1;
   border-right: 1px solid var(--twitter-background);
   margin-top: 20px;
   padding-left: 20px;
@@ -22,4 +22,21 @@
   border-radius: 30px !important;
   height: 50px !important;
   margin-top: 20px !important;
+}
+
+
+/*Phone*/
+
+@media screen and (max-width: 499px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/*Tablet,Laptop*/
+
+@media screen and (max-width: 1265px) {
+  .sidebar {
+    flex: 0.1;
+  }
 }

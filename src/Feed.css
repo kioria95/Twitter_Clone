@@ -1,5 +1,5 @@
 .feed {
-  flex: 0.4;
+  flex: 0.5;
   border-right: 1px solid var(--twitter-background);
   overflow-y: scroll;
 
@@ -14,14 +14,30 @@
 }
 
 .feed_Header {
-  position: sticky;
   top: 0;
   background-color: white;
   z-index: 100;
-  /* border: 1px solid var(--twitter-background); */
+  /* border-bottom: 1px solid var(--twitter-background); */
+  padding: 10px;
 }
 
 .feed_Header > h2 {
   font-size: 20px;
   font-weight: 800;
+}
+
+/*Phone*/
+
+@media screen and (max-width: 499px) {
+  .feed {
+    flex: 1;
+  }
+}
+
+/*Tablets*/
+
+@media screen and (max-width: 1265px) {
+  .feed {
+    flex: 0.8;
+  }
 }

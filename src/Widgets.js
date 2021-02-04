@@ -10,7 +10,6 @@ import {
 function Widgets() {
   return (
     <div className="widgets">
-      <h2>Widgets</h2>
 
       <div className="widgets_Input">
         <SearchIcon className="widgets_SearchIcon" />

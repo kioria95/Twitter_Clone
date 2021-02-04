@@ -8,9 +8,11 @@ function Feed() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    db.collection("posts").onSnapshot((snapshot) => {
-      setPosts(snapshot.docs.map((doc) => doc.data()));
-    });
+    db.collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setPosts(snapshot.docs.map((doc) => doc.data()));
+      });
   }, []);
 
   return (
@@ -19,7 +21,10 @@ function Feed() {
         <h2>Home</h2>
       </div>
 
+     
+     
       <TweetBox />
+    
 
       {posts.map((post) => (
         <Post

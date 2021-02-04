@@ -21,7 +21,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
               {displayName}
               <span className="post_Username">
                 {verified && <VerifiedUserIcon className="post_Badge" />} @{" "}
-                {username}
+                {username} 
               </span>
             </h3>
           </div>
@@ -30,7 +30,7 @@ function Post({ displayName, username, verified, text, image, avatar }) {
             <p>{text}</p>
           </div>
 
-          <img src={image} alt="" />
+          <img className="post_Image" src={image} alt="" />
         </div>
 
         <div className="post_Footer">
